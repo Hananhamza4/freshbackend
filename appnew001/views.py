@@ -1,10 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def hanan(request):
-    return HttpResponse("hello world ")
-def newfunc(request):
-    return HttpResponse("new page !!!")
+
+
 def newfunc01(request):
     return render(request,"index.html")
 def loginfun(request):

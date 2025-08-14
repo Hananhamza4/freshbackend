@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,21 +16,21 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 	<!-- fontawesome -->
-	<link rel="stylesheet" href="assets/css/all.min.css">
+	<link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
 	<!-- bootstrap -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
 	<!-- owl carousel -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
 	<!-- magnific popup -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
 	<!-- animate css -->
-	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
 	<!-- mean menu css -->
-	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
 	<!-- main style -->
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
 	<!-- responsive -->
-	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
 
 </head>
 <body>
@@ -50,8 +51,8 @@
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
-							<a href="index.html">
-								<img src="assets/img/logo.png" alt="">
+							<a href="{% url 'indexfun' %}">
+								<img src="{% static 'assets/img/logo.png' %}" alt="">
 							</a>
 						</div>
 						<!-- logo -->
@@ -65,36 +66,36 @@
 										<li><a href="index_2.html">Slider Home</a></li>
 									</ul>
 								</li>
-								<li><a href="about.html">About</a></li>
+								<li><a href="{% url 'about' %}">About</a></li>
 								<li><a href="#">Pages</a>
 									<ul class="sub-menu">
-										<li><a href="404.html">404 page</a></li>
-										<li><a href="about.html">About</a></li>
-										<li><a href="cart.html">Cart</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="contact.html">Contact</a></li>
-										<li><a href="news.html">News</a></li>
-										<li><a href="shop.html">Shop</a></li>
+										<li><a href="{% url 'error' %}">404 page</a></li>
+										<li><a href="{% url 'about' %}l">About</a></li>
+										<li><a href="{% url 'cart' %}">Cart</a></li>
+										<li><a href="{% url 'checkout' %}">Check Out</a></li>
+										<li><a href="{% url 'contact' %}">Contact</a></li>
+										<li><a href="{% url 'news' %}">News</a></li>
+										<li><a href="{% url 'shop' %}">Shop</a></li>
 									</ul>
 								</li>
-								<li><a href="news.html">News</a>
+								<li><a href="{% url 'news' %}">News</a>
 									<ul class="sub-menu">
 										<li><a href="news.html">News</a></li>
 										<li><a href="single-news.html">Single News</a></li>
 									</ul>
 								</li>
-								<li><a href="contact.html">Contact</a></li>
-								<li><a href="shop.html">Shop</a>
+								<li><a href="{% url 'contact' %}">Contact</a></li>
+								<li><a href="{% url 'shop' %}">Shop</a>
 									<ul class="sub-menu">
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="single-product.html">Single Product</a></li>
-										<li><a href="cart.html">Cart</a></li>
+										<li><a href="{% url 'shop' %}">Shop</a></li>
+										<li><a href="{% url 'checkout' %}">Check Out</a></li>
+										<li><a href="{% url 'singlep' %}">Single Product</a></li>
+										<li><a href="{% url 'cart' %}">Cart</a></li>
 									</ul>
 								</li>
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+										<a class="shopping-cart" href="{% url 'cart' %}"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
@@ -168,7 +169,7 @@
 							<div class="comment-list">
 								<div class="single-comment-body">
 									<div class="comment-user-avater">
-										<img src="assets/img/avaters/avatar1.png" alt="">
+										<img src="{% static 'assets/img/avaters/avatar1.png' %}" alt="">
 									</div>
 									<div class="comment-text-body">
 										<h4>Jenny Joe <span class="comment-date">Aprl 26, 2020</span> <a href="#">reply</a></h4>
@@ -176,7 +177,7 @@
 									</div>
 									<div class="single-comment-body child">
 										<div class="comment-user-avater">
-											<img src="assets/img/avaters/avatar3.png" alt="">
+											<img src="{% static 'assets/img/avaters/avatar3.png' %}" alt="">
 										</div>
 										<div class="comment-text-body">
 											<h4>Simon Soe <span class="comment-date">Aprl 27, 2020</span> <a href="#">reply</a></h4>
@@ -186,7 +187,7 @@
 								</div>
 								<div class="single-comment-body">
 									<div class="comment-user-avater">
-										<img src="assets/img/avaters/avatar2.png" alt="">
+										<img src="{% static 'assets/img/avaters/avatar2.png' %}" alt="">
 									</div>
 									<div class="comment-text-body">
 										<h4>Addy Aoe <span class="comment-date">May 12, 2020</span> <a href="#">reply</a></h4>
@@ -199,7 +200,7 @@
 						<div class="comment-template">
 							<h4>Leave a comment</h4>
 							<p>If you have a comment dont feel hesitate to send us your opinion.</p>
-							<form action="index.html">
+							<form action="{% url 'indexfun' %}">
 								<p>
 									<input type="text" placeholder="Your Name">
 									<input type="email" placeholder="Your Email">
@@ -215,32 +216,32 @@
 						<div class="recent-posts">
 							<h4>Recent Posts</h4>
 							<ul>
-								<li><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></li>
-								<li><a href="single-news.html">A man's worth has its season, like tomato.</a></li>
-								<li><a href="single-news.html">Good thoughts bear good fresh juicy fruit.</a></li>
-								<li><a href="single-news.html">Fall in love with the fresh orange</a></li>
-								<li><a href="single-news.html">Why the berries always look delecious</a></li>
+								<li><a href="{% url 'singlen' %}">You will vainly look for fruit on it in autumn.</a></li>
+								<li><a href="{% url 'singlen' %}">A man's worth has its season, like tomato.</a></li>
+								<li><a href="{% url 'singlen' %}">Good thoughts bear good fresh juicy fruit.</a></li>
+								<li><a href="{% url 'singlen' %}">Fall in love with the fresh orange</a></li>
+								<li><a href="{% url 'singlen' %}">Why the berries always look delecious</a></li>
 							</ul>
 						</div>
 						<div class="archive-posts">
 							<h4>Archive Posts</h4>
 							<ul>
-								<li><a href="single-news.html">JAN 2019 (5)</a></li>
-								<li><a href="single-news.html">FEB 2019 (3)</a></li>
-								<li><a href="single-news.html">MAY 2019 (4)</a></li>
-								<li><a href="single-news.html">SEP 2019 (4)</a></li>
-								<li><a href="single-news.html">DEC 2019 (3)</a></li>
+								<li><a href="{% url 'singlen' %}">JAN 2019 (5)</a></li>
+								<li><a href="{% url 'singlen' %}">FEB 2019 (3)</a></li>
+								<li><a href="{% url 'singlen' %}">MAY 2019 (4)</a></li>
+								<li><a href="{% url 'singlen' %}">SEP 2019 (4)</a></li>
+								<li><a href="{% url 'singlen' %}">DEC 2019 (3)</a></li>
 							</ul>
 						</div>
 						<div class="tag-section">
 							<h4>Tags</h4>
 							<ul>
-								<li><a href="single-news.html">Apple</a></li>
-								<li><a href="single-news.html">Strawberry</a></li>
-								<li><a href="single-news.html">BErry</a></li>
-								<li><a href="single-news.html">Orange</a></li>
-								<li><a href="single-news.html">Lemon</a></li>
-								<li><a href="single-news.html">Banana</a></li>
+								<li><a href="{% url 'singlen' %}">Apple</a></li>
+								<li><a href="{% url 'singlen' %}">Strawberry</a></li>
+								<li><a href="{% url 'singlen' %}">BErry</a></li>
+								<li><a href="{% url 'singlen' %}">Orange</a></li>
+								<li><a href="{% url 'singlen' %}">Lemon</a></li>
+								<li><a href="{% url 'singlen' %}">Banana</a></li>
 							</ul>
 						</div>
 					</div>
@@ -257,19 +258,19 @@
 				<div class="col-lg-12">
 					<div class="logo-carousel-inner">
 						<div class="single-logo-item">
-							<img src="assets/img/company-logos/1.png" alt="">
+							<img src="{% static 'assets/img/company-logos/1.png' %}" alt="">
 						</div>
 						<div class="single-logo-item">
-							<img src="assets/img/company-logos/2.png" alt="">
+							<img src="{% static 'assets/img/company-logos/2.png' %}" alt="">
 						</div>
 						<div class="single-logo-item">
-							<img src="assets/img/company-logos/3.png" alt="">
+							<img src="{% static 'assets/img/company-logos/3.png' %}" alt="">
 						</div>
 						<div class="single-logo-item">
-							<img src="assets/img/company-logos/4.png" alt="">
+							<img src="{% static 'assets/img/company-logos/4.png' %}" alt="">
 						</div>
 						<div class="single-logo-item">
-							<img src="assets/img/company-logos/5.png" alt="">
+							<img src="{% static 'assets/img/company-logos/5.png' %}" alt="">
 						</div>
 					</div>
 				</div>
@@ -302,11 +303,11 @@
 					<div class="footer-box pages">
 						<h2 class="widget-title">Pages</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Shop</a></li>
-							<li><a href="news.html">News</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="{% url 'indexfun' %}">Home</a></li>
+							<li><a href="{% url 'about' %}">About</a></li>
+							<li><a href="{% url 'shop' %}">Shop</a></li>
+							<li><a href="{% url 'news' %}">News</a></li>
+							<li><a href="{% url 'contact' %}">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -314,7 +315,7 @@
 					<div class="footer-box subscribe">
 						<h2 class="widget-title">Subscribe</h2>
 						<p>Subscribe to our mailing list to get the latest updates.</p>
-						<form action="index.html">
+						<form action="{% url 'indexfun' %}">
 							<input type="email" placeholder="Email">
 							<button type="submit"><i class="fas fa-paper-plane"></i></button>
 						</form>
@@ -351,25 +352,25 @@
 	<!-- end copyright -->
 	
 	<!-- jquery -->
-	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<script src="{% static 'assets/js/jquery-1.11.3.min.js' %}"></script>
 	<!-- bootstrap -->
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
 	<!-- count down -->
-	<script src="assets/js/jquery.countdown.js"></script>
+	<script src="{% static 'assets/js/jquery.countdown.js' %}"></script>
 	<!-- isotope -->
-	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="{% static 'assets/js/jquery.isotope-3.0.6.min.js' %}"></script>
 	<!-- waypoints -->
-	<script src="assets/js/waypoints.js"></script>
+	<script src="{% static 'assets/js/waypoints.js' %}"></script>
 	<!-- owl carousel -->
-	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
 	<!-- magnific popup -->
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
 	<!-- mean menu -->
-	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
 	<!-- sticker js -->
-	<script src="assets/js/sticker.js"></script>
+	<script src="{% static 'assets/js/sticker.js' %}"></script>
 	<!-- main js -->
-	<script src="assets/js/main.js"></script>
+	<script src="{% static 'assets/js/main.js' %}"></script>
 
 </body>
 </html>

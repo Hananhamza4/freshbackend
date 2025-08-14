@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,21 +16,21 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 	<!-- fontawesome -->
-	<link rel="stylesheet" href="assets/css/all.min.css">
+	<link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
 	<!-- bootstrap -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{%  static 'assets/bootstrap/css/bootstrap.min.css' %}">
 	<!-- owl carousel -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
 	<!-- magnific popup -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="{%  static 'assets/css/magnific-popup.css' %}">
 	<!-- animate css -->
-	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="{%  static 'assets/css/animate.css' %}">
 	<!-- mean menu css -->
-	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
 	<!-- main style -->
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
 	<!-- responsive -->
-	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
 
 </head>
 <body>
@@ -50,8 +51,8 @@
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
-							<a href="index.html">
-								<img src="assets/img/logo03.png" alt="">
+							<a href="{% url 'indexfun' %}">
+								<img src="{% static 'assets/img/logo03.png' %}" alt="">
 							</a>
 						</div>
 						<!-- logo -->
@@ -65,36 +66,36 @@
 										<li><a href="index_2.html">Slider Home</a></li>
 									</ul>
 								</li>
-								<li><a href="about.html">About</a></li>
+								<li><a href="{% url 'about' %}">About</a></li>
 								<li><a href="#">Pages</a>
 									<ul class="sub-menu">
-										<li><a href="404.html">404 page</a></li>
-										<li><a href="about.html">About</a></li>
-										<li><a href="cart.html">Cart</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="contact.html">Contact</a></li>
-										<li><a href="news.html">News</a></li>
-										<li><a href="shop.html">Shop</a></li>
+										<li><a href="{% url 'error' %}">404 page</a></li>
+										<li><a href="{% url 'about' %}">About</a></li>
+										<li><a href="{% url 'cart' %}">Cart</a></li>
+										<li><a href="{% url 'checkout' %}">Check Out</a></li>
+										<li><a href="{% url 'contact' %}">Contact</a></li>
+										<li><a href="{% url 'news' %}">News</a></li>
+										<li><a href="{% url 'shop' %}">Shop</a></li>
 									</ul>
 								</li>
-								<li><a href="news.html">News</a>
+								<li><a href="{% url 'news' %}">News</a>
 									<ul class="sub-menu">
-										<li><a href="news.html">News</a></li>
-										<li><a href="single-news.html">Single News</a></li>
+										<li><a href="{% url 'news' %}">News</a></li>
+										<li><a href="{% url 'singlen' %}">Single News</a></li>
 									</ul>
 								</li>
-								<li><a href="contact.html">Contact</a></li>
-								<li><a href="shop.html">Shop</a>
+								<li><a href="{% url 'contact' %}">Contact</a></li>
+								<li><a href="{% url 'shop' %}">Shop</a>
 									<ul class="sub-menu">
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="single-product.html">Single Product</a></li>
-										<li><a href="cart.html">Cart</a></li>
+										<li><a href="{% url 'shop' %}">Shop</a></li>
+										<li><a href="{% url 'checkout' %}">Check Out</a></li>
+										<li><a href="{% url 'singlep' %}">Single Product</a></li>
+										<li><a href="{% url 'cart' %}">Cart</a></li>
 									</ul>
 								</li>
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+										<a class="shopping-cart" href="{% url 'cart' %}"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
@@ -150,7 +151,7 @@
 			<div class="row">
 				<div class="col-md-5">
 					<div class="single-product-img">
-						<img src="assets/img/pottato01.png" alt="">
+						<img src="{% static 'assets/img/pottato01.png' %}" alt="">
 					</div>
 				</div>
 				<div class="col-md-7">
@@ -159,10 +160,10 @@
 						<p class="single-product-pricing"><span>Per Kg</span> $50</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta sint dignissimos, rem commodi cum voluptatem quae reprehenderit repudiandae ea tempora incidunt ipsa, quisquam animi perferendis eos eum modi! Tempora, earum.</p>
 						<div class="single-product-form">
-							<form action="index.html">
+							<form action="{% url 'indexfun' %}">
 								<input type="number" placeholder="0">
 							</form>
-							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							<a href="{% url 'cart' %}" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 							<p><strong>Categories: </strong>Fruits, Organic</p>
 						</div>
 						<h4>Share:</h4>
@@ -196,63 +197,63 @@
 					<div class="col-lg-4 col-md-6 text-center">
 					  <div class="single-product-item" style="min-height: 420px; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
 						<div class="product-image" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-						  <a href="single-product.html"><img src="assets/img/pottato01.png" alt="" style="max-height: 100%; max-width: 100%;"></a>
+						  <a href="{% url 'singlep' %}"><img src="{% static 'assets/img/pottato01.png' %}" alt="" style="max-height: 100%; max-width: 100%;"></a>
 						</div>
 						<h3>Potato</h3>
 						<p class="product-price"><span>Per Kg</span> 85$ </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<a href="{% url 'cart' %}" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 					  </div>
 					</div>
 			  
 					<div class="col-lg-4 col-md-6 text-center">
 					  <div class="single-product-item" style="min-height: 420px; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
 						<div class="product-image" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-						  <a href="single-product.html"><img src="assets/img/cucmber01.png" alt="" style="max-height: 100%; max-width: 100%;"></a>
+						  <a href="{% url 'singlep' %}"><img src="{% static 'assets/img/cucmber01.png' %}" alt="" style="max-height: 100%; max-width: 100%;"></a>
 						</div>
 						<h3>Cucumber</h3>
 						<p class="product-price"><span>Per Kg</span> 70$ </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<a href="{% url 'cart' %}" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 					  </div>
 					</div>
 			  
 					<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
 					  <div class="single-product-item" style="min-height: 420px; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
 						<div class="product-image" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-						  <a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt="" style="max-height: 100%; max-width: 100%;"></a>
+						  <a href="{% url 'singlep' %}"><img src="{% static 'assets/img/products/product-img-3.jpg' %}" alt="" style="max-height: 100%; max-width: 100%;"></a>
 						</div>
 						<h3>Lemon</h3>
 						<p class="product-price"><span>Per Kg</span> 35$ </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<a href="{% url 'cart' %}" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 					  </div>
 					</div>
 					<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
 						<div class="single-product-item" style="min-height: 420px; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
 						  <div class="product-image" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-							<a href="single-product.html"><img src="assets/img/tomato001.png" alt="" style="max-height: 100%; max-width: 100%;"></a>
+							<a href="{% url 'singlep' %}"><img src="{%  static 'assets/img/tomato001.png' %}" alt="" style="max-height: 100%; max-width: 100%;"></a>
 						  </div>
 						  <h3>Tomato</h3>
 						  <p class="product-price"><span>Per Kg</span> 35$ </p>
-						  <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						  <a href="{% url 'cart' %}" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 						</div>
 					  </div>
 					  <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
 						<div class="single-product-item" style="min-height: 420px; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
 						  <div class="product-image" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-							<a href="single-product.html"><img src="assets/img/carrot01.png" alt="" style="max-height: 100%; max-width: 100%;"></a>
+							<a href="{% url 'singlep' %}"><img src="{%  static 'assets/img/carrot01.png' %}" alt="" style="max-height: 100%; max-width: 100%;"></a>
 						  </div>
 						  <h3>Carrot</h3>
 						  <p class="product-price"><span>Per Kg</span> 35$ </p>
-						  <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						  <a href="{% url 'cart' %}" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 						</div>
 					  </div>
 					  <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
 						<div class="single-product-item" style="min-height: 420px; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
 						  <div class="product-image" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-							<a href="single-product.html"><img src="assets/img/onion01.png" alt="" style="max-height: 100%; max-width: 100%;"></a>
+							<a href="{% url 'singlep' %}"><img src="{%  static 'assets/img/onion01.png' %}" alt="" style="max-height: 100%; max-width: 100%;"></a>
 						  </div>
 						  <h3>Onion</h3>
 						  <p class="product-price"><span>Per Kg</span> 35$ </p>
-						  <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						  <a href="{% url 'cart' %}" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 						</div>
 					  </div>
 					  
@@ -268,19 +269,19 @@
 				<div class="col-lg-12">
 					<div class="logo-carousel-inner">
 						<div class="single-logo-item">
-							<img src="assets/img/company-logos/1.png" alt="">
+							<img src="{%  static 'assets/img/company-logos/1.png' %}" alt="">
 						</div>
 						<div class="single-logo-item">
-							<img src="assets/img/company-logos/2.png" alt="">
+							<img src="{%  static 'assets/img/company-logos/2.png' %}" alt="">
 						</div>
 						<div class="single-logo-item">
-							<img src="assets/img/company-logos/3.png" alt="">
+							<img src="{%  static 'assets/img/company-logos/3.png' %}" alt="">
 						</div>
 						<div class="single-logo-item">
-							<img src="assets/img/company-logos/4.png" alt="">
+							<img src="{%  static 'assets/img/company-logos/4.png' %}" alt="">
 						</div>
 						<div class="single-logo-item">
-							<img src="assets/img/company-logos/5.png" alt="">
+							<img src="{%  static 'assets/img/company-logos/5.png' %}" alt="">
 						</div>
 					</div>
 				</div>
@@ -313,11 +314,11 @@
 					<div class="footer-box pages">
 						<h2 class="widget-title">Pages</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Shop</a></li>
-							<li><a href="news.html">News</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="{% url 'indexfun' %}">Home</a></li>
+							<li><a href="{% url 'about' %}">About</a></li>
+							<li><a href="{% url 'shop' %}">Shop</a></li>
+							<li><a href="{% url 'news' %}">News</a></li>
+							<li><a href="{% url 'contact' %}">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -325,7 +326,7 @@
 					<div class="footer-box subscribe">
 						<h2 class="widget-title">Subscribe</h2>
 						<p>Subscribe to our mailing list to get the latest updates.</p>
-						<form action="index.html">
+						<form action="{% url 'indexfun' %}">
 							<input type="email" placeholder="Email">
 							<button type="submit"><i class="fas fa-paper-plane"></i></button>
 						</form>
@@ -362,25 +363,25 @@
 	<!-- end copyright -->
 	
 	<!-- jquery -->
-	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<script src="{%  static 'assets/js/jquery-1.11.3.min.js' %}"></script>
 	<!-- bootstrap -->
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{%  static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
 	<!-- count down -->
-	<script src="assets/js/jquery.countdown.js"></script>
+	<script src="{%  static 'assets/js/jquery.countdown.js' %}"></script>
 	<!-- isotope -->
-	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="{%  static 'assets/js/jquery.isotope-3.0.6.min.js' %}"></script>
 	<!-- waypoints -->
-	<script src="assets/js/waypoints.js"></script>
+	<script src="{%  static 'assets/js/waypoints.js' %}"></script>
 	<!-- owl carousel -->
-	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="{%  static 'assets/js/owl.carousel.min.js' %}"></script>
 	<!-- magnific popup -->
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="{%  static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
 	<!-- mean menu -->
-	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<script src="{%  static 'assets/js/jquery.meanmenu.min.js' %}"></script>
 	<!-- sticker js -->
-	<script src="assets/js/sticker.js"></script>
+	<script src="{%  static 'assets/js/sticker.js' %}"></script>
 	<!-- main js -->
-	<script src="assets/js/main.js"></script>
+	<script src="{%  static 'assets/js/main.js' %}"></script>
 
 </body>
 </html>
